@@ -2,8 +2,9 @@ services:
   - type: web
     name: reinaerd-umbraco
     env: dotnet
-    buildCommand: dotnet publish -c Release -o out
+    buildCommand: dotnet publish Reinaerd.Umbrico.Site -c Release -o out
     startCommand: dotnet Reinaerd.Umbrico.Site.dll
+    buildFilter: Reinaerd.Umbrico.Site/**
     envVars:
       - key: ASPNETCORE_ENVIRONMENT
         value: Production
